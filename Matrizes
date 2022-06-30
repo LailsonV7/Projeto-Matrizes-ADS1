@@ -1,0 +1,93 @@
+print("Entradas:")
+print()
+
+x = int(input(" x = "))
+n = int(input(" n = "))
+print()
+
+matrizA = [ ]
+matrizAT = [ ]
+matrizB = [ ]
+matrizBT = [ ]
+matrizC = [ ]
+
+print("Digite os valores da Matriz A:")
+print()
+
+for i in range(1, n + 1):
+	a = [ ]
+	for j in range(1, n + 1):
+		a.append(int(input(f" Valor {i}x{j}: ")))
+			
+	matrizA.append(a)
+
+print()
+print("Matriz A:")
+print()
+		
+for i in range(n):
+	for j in range(n):
+		print(matrizA [i] [j], end= " ")
+		
+	print()
+	
+print()
+
+for i in range(n):
+	aT= [ ]
+	for j in range(n):
+		aT.append(matrizA[j][i])
+		
+	matrizAT.append(aT)
+	
+for i in range(n):
+	matrizAT[i]
+
+print("Digite os valores da Matriz B:")
+print()
+
+for i in range(1, n + 1):
+	b = [ ]
+	for j in range(1, n + 1):
+		b.append(int(input(f" Valor {i}x{j}: ")))
+			
+	matrizB.append(b)
+		
+print()
+print("Matriz B:")
+print()
+
+for i in range(n):
+	for j in range(n):
+		print(matrizB[i] [j], end= " ")
+		
+	print()
+	
+print()
+
+for i in range(n):
+	bT= [ ]
+	for j in range(n):
+		bT.append(matrizB[j][i])
+		
+	matrizBT.append(bT)
+
+for i in range(n):
+	matrizBT[i]
+
+for i in range(n):
+	c = [ ]
+	for j in range(n):
+		c.append(matrizBT[i] [j] - x * matrizA[i] [j])
+		
+	matrizC.append(c)
+	
+print()
+print("<Saida> Matriz C:")
+print()
+
+for i in range(n):
+	for j in range(n):
+		print(matrizC [i] [j], end=" ")
+		
+	print()
